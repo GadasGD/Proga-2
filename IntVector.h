@@ -22,6 +22,6 @@ int int_vector_resize(IntVector *v, size_t new_size);
 void int_vector_pop_back(IntVector *v);
 int int_vector_shrink_to_fit(IntVector *v);
 IntVector *int_vector_copy(const IntVector *v);
-void int_vector_print(IntVector *v, size_t size);
+void int_vector_print(IntVector *v);
 
 #endif

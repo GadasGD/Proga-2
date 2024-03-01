@@ -11,7 +11,7 @@ IntVector *int_vector_new(size_t initial_capacity) // Создает масси�
     }
     struc->data = (int *)malloc(initial_capacity * sizeof(int));
     struc->capacity = initial_capacity;
-    struc->size = 0;
+    struc->size = 1;
     if (!struc->data)
     {
         free(struc);
@@ -137,8 +137,9 @@ IntVector *int_vector_copy(const IntVector *v) // Копирует вектор
     return v_copy;
 }
 
-void int_vector_print(IntVector *v, size_t size)
+void int_vector_print(IntVector *v)
 {   
+    size_t size = int_vector_get_size(v);
     printf("[");
     for (int i = 0; i < size; i++)
     {   
